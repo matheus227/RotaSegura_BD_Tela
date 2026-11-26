@@ -1,0 +1,11 @@
+# Saída de compilação
+target/
+
+# Banco de dados local (gerado automaticamente na 1ª execução)
+data/*.db
+data/*.db-journal
+
+# Arquivos de IDE que variam por máquina
+.idea/workspace.xml
+.idea/dataSources/
+.idea/dataSources.local.xml

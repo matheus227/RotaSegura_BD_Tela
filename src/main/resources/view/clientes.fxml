@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.concessionaria.gui.ClientesController"
+      spacing="16.0" styleClass="tela">
+    <VBox minWidth="330.0" prefWidth="330.0" spacing="6.0" styleClass="painel">
+        <Label fx:id="lblModo" styleClass="titulo-painel" text="Novo cliente" />
+        <Label text="Nome completo *" />
+        <TextField fx:id="txtNome" promptText="Ex.: Maria da Silva" />
+        <Label text="CPF *" />
+        <TextField fx:id="txtCpf" promptText="000.000.000-00" />
+        <Label text="CNH * (11 dígitos)" />
+        <TextField fx:id="txtCnh" promptText="Somente números" />
+        <Label text="Telefone" />
+        <TextField fx:id="txtTelefone" promptText="(14) 99999-9999" />
+        <Label text="E-mail" />
+        <TextField fx:id="txtEmail" promptText="cliente@email.com" />
+        <HBox spacing="8.0" styleClass="barra-botoes">
+            <Button onAction="#onSalvar" styleClass="botao-primario" text="Salvar" />
+            <Button onAction="#onNovo" text="Novo" />
+            <Button fx:id="btnExcluir" onAction="#onExcluir" styleClass="botao-perigo" text="Excluir" />
+        </HBox>
+    </VBox>
+    <VBox spacing="8.0" styleClass="painel" HBox.hgrow="ALWAYS">
+        <HBox alignment="CENTER_LEFT" spacing="8.0">
+            <Label text="Buscar:" />
+            <TextField fx:id="txtBusca" promptText="Nome ou CPF" HBox.hgrow="ALWAYS" />
+        </HBox>
+        <TableView fx:id="tabela" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="50.0" text="Nº" />
+                <TableColumn fx:id="colNome" prefWidth="220.0" text="Nome" />
+                <TableColumn fx:id="colCpf" prefWidth="120.0" text="CPF" />
+                <TableColumn fx:id="colCnh" prefWidth="110.0" text="CNH" />
+                <TableColumn fx:id="colTelefone" prefWidth="120.0" text="Telefone" />
+                <TableColumn fx:id="colEmail" prefWidth="180.0" text="E-mail" />
+            </columns>
+        </TableView>
+    </VBox>
+</HBox>

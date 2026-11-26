@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.concessionaria.gui.MainController"
+            prefHeight="720.0" prefWidth="1180.0">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="cabecalho">
+            <Label styleClass="titulo-app" text="Rota Segura" />
+            <Label styleClass="subtitulo-app" text="Locadora de Veículos  |  Atendimento de balcão" />
+        </HBox>
+    </top>
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Clientes">
+                    <content>
+                        <fx:include fx:id="clientes" source="clientes.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Veículos">
+                    <content>
+                        <fx:include fx:id="veiculos" source="veiculos.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Locações">
+                    <content>
+                        <fx:include fx:id="locacoes" source="locacoes.fxml" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

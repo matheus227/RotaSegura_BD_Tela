@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.concessionaria.gui.LocacoesController"
+      spacing="12.0" styleClass="tela">
+    <VBox spacing="8.0" styleClass="painel">
+        <Label styleClass="titulo-painel" text="Nova locação" />
+        <GridPane hgap="12.0" vgap="4.0">
+            <Label text="Cliente *" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="Veículo disponível *" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Retirada *" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label text="Dias *" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+            <ComboBox fx:id="cmbCliente" prefWidth="260.0" promptText="Selecione o cliente"
+                      GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbVeiculo" prefWidth="340.0" promptText="Selecione o veículo"
+                      GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker fx:id="dpRetirada" prefWidth="140.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Spinner fx:id="spnDias" editable="true" prefWidth="90.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button onAction="#onAbrir" styleClass="botao-primario" text="Abrir locação"
+                    GridPane.columnIndex="4" GridPane.rowIndex="1" />
+        </GridPane>
+        <Label fx:id="lblEstimativa" styleClass="destaque" />
+        <Label fx:id="lblRegras" styleClass="texto-suave" wrapText="true" />
+    </VBox>
+
+    <VBox spacing="8.0" styleClass="painel" VBox.vgrow="ALWAYS">
+        <HBox alignment="CENTER_LEFT" spacing="8.0">
+            <Label styleClass="titulo-painel" text="Locações" />
+            <CheckBox fx:id="chkSomenteAbertas" text="Mostrar somente abertas" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnEncerrar" onAction="#onEncerrar" styleClass="botao-primario"
+                    text="Encerrar / fechar contrato" />
+            <Button fx:id="btnRelatorio" onAction="#onRelatorio" text="Ver relatório" />
+            <Button fx:id="btnEditar" onAction="#onEditar" text="Editar" />
+            <Button fx:id="btnCancelar" onAction="#onCancelar" styleClass="botao-perigo" text="Cancelar locação" />
+            <Button onAction="#onAtualizar" text="Atualizar" />
+        </HBox>
+        <TableView fx:id="tabela" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="50.0" text="Nº" />
+                <TableColumn fx:id="colCliente" prefWidth="180.0" text="Cliente" />
+                <TableColumn fx:id="colVeiculo" prefWidth="190.0" text="Veículo" />
+                <TableColumn fx:id="colCategoria" prefWidth="80.0" text="Categoria" />
+                <TableColumn fx:id="colRetirada" prefWidth="95.0" text="Retirada" />
+                <TableColumn fx:id="colPrevista" prefWidth="95.0" text="Prevista" />
+                <TableColumn fx:id="colDevolucao" prefWidth="95.0" text="Devolução" />
+                <TableColumn fx:id="colValor" prefWidth="110.0" text="Valor final" />
+                <TableColumn fx:id="colStatus" prefWidth="90.0" text="Status" />
+            </columns>
+        </TableView>
+    </VBox>
+</VBox>

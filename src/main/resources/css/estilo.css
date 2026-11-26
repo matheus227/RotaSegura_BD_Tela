@@ -1,0 +1,46 @@
+.root {
+    -fx-font-size: 13px;
+    -cor-primaria: #1f5fa8;
+    -cor-primaria-escura: #174a85;
+    -cor-fundo: #f1f4f8;
+    -cor-perigo: #b3261e;
+    -fx-background-color: -cor-fundo;
+}
+
+.cabecalho {
+    -fx-background-color: -cor-primaria;
+    -fx-padding: 12 20 12 20;
+}
+.titulo-app { -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; }
+.subtitulo-app { -fx-text-fill: #cfe0f5; -fx-font-size: 13px; }
+
+.tela { -fx-background-color: -cor-fundo; -fx-padding: 16; }
+
+.painel {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #d9dfe7;
+    -fx-border-radius: 8;
+    -fx-padding: 14;
+}
+.titulo-painel { -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1c2b3a; }
+.texto-suave { -fx-text-fill: #5b6b7b; -fx-font-size: 12px; }
+.destaque { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: -cor-primaria-escura; }
+.total { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: -cor-primaria-escura; }
+.barra-botoes { -fx-padding: 10 0 0 0; }
+
+.button { -fx-cursor: hand; -fx-background-radius: 6; }
+.botao-primario {
+    -fx-background-color: -cor-primaria;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.botao-primario:hover { -fx-background-color: -cor-primaria-escura; }
+.botao-primario:disabled { -fx-opacity: 0.5; }
+.botao-perigo { -fx-background-color: #fbe9e7; -fx-text-fill: -cor-perigo; }
+.botao-perigo:hover { -fx-background-color: #f5cdc8; }
+
+.status-locado { -fx-text-fill: #b3261e; -fx-font-weight: bold; }
+.status-disponivel { -fx-text-fill: #1b7f3b; -fx-font-weight: bold; }
+
+.relatorio { -fx-font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; -fx-font-size: 12px; }

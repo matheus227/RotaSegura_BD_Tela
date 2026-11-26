@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.concessionaria.gui.FechamentoController"
+      prefHeight="640.0" prefWidth="620.0" spacing="10.0" styleClass="tela">
+    <Label fx:id="lblContrato" styleClass="titulo-painel" />
+    <Label fx:id="lblCliente" />
+    <Label fx:id="lblVeiculo" />
+    <Label fx:id="lblPeriodo" />
+    <Label fx:id="lblSituacao" styleClass="texto-suave" />
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Label text="Data de devolução:" />
+        <DatePicker fx:id="dpDevolucao" prefWidth="150.0" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label text="Total:" />
+        <Label fx:id="lblTotal" styleClass="total" />
+    </HBox>
+    <TextArea fx:id="txtRelatorio" editable="false" styleClass="relatorio" VBox.vgrow="ALWAYS" />
+    <HBox alignment="CENTER_RIGHT" spacing="8.0">
+        <Button fx:id="btnConfirmar" onAction="#onConfirmar" styleClass="botao-primario" text="Confirmar encerramento" />
+        <Button fx:id="btnSalvar" onAction="#onSalvarRelatorio" text="Salvar relatório (.txt)" />
+        <Button onAction="#onFechar" text="Fechar" />
+    </HBox>
+</VBox>
