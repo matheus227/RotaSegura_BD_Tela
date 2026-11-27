@@ -50,11 +50,12 @@ a classe `org.concessionaria.Launcher` (ou `org.concessionaria.App`).
 - Os dois scripts rodam automaticamente na inicialização (também podem ser usados à mão em qualquer cliente SQLite).
 - **Para reiniciar do zero**: feche o sistema e apague `data/rota_segura.db`.
 
+```bash
 | sqlite3 data\rota_segura.db 
 | .tables 
 | SELECT * FROM veiculo; 
 | .quit
-
+```
 ## 5. Funcionalidades (mapa do enunciado)
 
 | Requisito do TP2 | Onde está |
